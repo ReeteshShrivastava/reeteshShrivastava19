@@ -122,16 +122,16 @@ function displayData(data){
         var brand = document.createElement("h4");
         brand.innerText = elm.brand;
         ancor.append(image,div,price,brand);
-        // anchor.addEventListener("click",()=>{
-        //     var obj = {
-        //         image: elm.image,
-        //         des: elm.description,
-        //         price: elm.price,
-        //     }
-        //     // phoneData.push(obj);
-        //     localStorage.setItem("detail",JSON.stringify(obj));
-        //     location.href = "detailPage.html";
-        // })
+        ancor.addEventListener("click",()=>{
+            var obj = {
+                image: elm.image,
+                des: elm.description,
+                price: elm.price,
+            }
+            // phoneData.push(obj);
+            localStorage.setItem("detail",JSON.stringify(obj));
+            location.href = "detailPage.html";
+        })
         container.append(ancor);
     })
 }
